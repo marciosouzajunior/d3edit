@@ -3,7 +3,7 @@
 = File config.properties =
 {{{
 name=server
-look_and_feel=javax.swing.plaf.nimbus.NimbusLookAndFeel<br>
+look_and_feel=javax.swing.plaf.nimbus.NimbusLookAndFeel
 hide_accounts=www|mds|dm|spooler|sql|sqldemo|qa|PICK/DESIGN|TUTOR|SINO|pa|MVSP|JD3|teste|
 password=
 string_color=-3245312
