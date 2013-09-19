@@ -1,7 +1,7 @@
-#summary One-sentence summary of this page.
+#summary Config file and 'RLISTA' routine
 
 = File config.properties =
-
+<pre>
 name=server
 look_and_feel=javax.swing.plaf.nimbus.NimbusLookAndFeel
 hide_accounts=www|mds|dm|spooler|sql|sqldemo|qa|PICK/DESIGN|TUTOR|SINO|pa|MVSP|JD3|teste|
@@ -18,6 +18,8 @@ programs_file=BP
 default_color=-16777216
 background_color=-1
 host=
+</pre>
+
 
 = Routine 'RLISTA' =
 <pre>
