@@ -1,0 +1,34 @@
+=======================================================================
+
+(C)2013 Márcio de Souza Júnior
+Released under GNU GPL v3 (http://www.gnu.org/licenses/gpl.html)
+marciosouzajunior@gmail.com
+http://javacomcafe.com
+
+=======================================================================
+
+D3Edit
+
+A visual code editor for the multivalued database D3 made ​​in Java to make developers life easier.
+
+Features:
+
+    Syntax higthlight
+    Code completion (keywords, templates and functions)
+    Theme, font and color customize
+    Undo/Redo
+    Find/Replace
+    Compile 
+
+Requirements:
+
+    D3 version 6 or later
+    Java Runtime Environment
+
+How to Use:
+
+    1. Install and startup jd3 on the server (http://sourceforge.net/projects/jd3/)
+    2. Compile and catalog the routine 'RLISTA' on the server
+    3. Run D3Edit, go Edit > Settings and configure
+
+
