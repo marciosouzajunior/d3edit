@@ -1,0 +1,61 @@
+# File config.properties #
+```
+name=server
+look_and_feel=javax.swing.plaf.nimbus.NimbusLookAndFeel
+hide_accounts=www|mds|dm|spooler|sql|sqldemo|qa|PICK/DESIGN|TUTOR|SINO|pa|MVSP|JD3|teste|
+password=
+string_color=-3245312
+font_style=0
+font_size=13
+font_name=Monospaced
+comment_color=-6908266
+keyword_color=-16776986
+port=20002
+user=
+programs_file=BP
+default_color=-16777216
+background_color=-1
+host=
+```
+
+
+# Routine 'RLISTA' #
+```
+SUB RLISTA(ARQUIVO$,CAMPOS$,SELECT$,SEPARADOR$,RET$)
+!
+* ROTINA PRA LISTAR ARQUIVO EM FORMATO CVS COM SEPARADOR
+* FABIO
+* 06/09/2012
+!
+* Converte variaveis
+CONVERT ";" TO @VM IN CAMPOS$
+
+OPEN ARQUIVO$ TO ARQTRAB ELSE STOP ARQUIVO$
+
+COMANDO = 'SSELECT ':ARQUIVO$:' ':SELECT$
+EXECUTE COMANDO CAPTURING VAR1 RETURNING VAR2
+IF VAR2[1,3] # "404" THEN 
+PRINT VAR1
+GO 9999
+END
+
+
+LOOP
+READNEXT CHAVE ELSE EXIT
+READ VAR FROM ARQTRAB, CHAVE ELSE GO 8888
+
+LIN = ""
+FOR I = 1 TO DCOUNT(CAMPOS$<1>,@VM)
+IF CAMPOS$<1,I> = 0 THEN
+VAL = CHAVE
+END ELSE
+VAL = VAR<CAMPOS$<1,I>>
+END
+IF LIN = "" THEN LIN := VAL ELSE LIN := SEPARADOR$:VAL
+NEXT I
+PRINT LIN
+8888 *
+REPEAT
+9999 *
+RETURN
+```
